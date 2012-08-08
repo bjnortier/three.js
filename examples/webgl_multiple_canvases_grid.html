@@ -103,15 +103,15 @@
 				apps.push( new App( 'container3', fullWidth, fullHeight, w * 0, h * 1, w, h ) );
 				apps.push( new App( 'container4', fullWidth, fullHeight, w * 1, h * 1, w, h ) );
 
-                var loader = new THREE.JSONLoader();
-                loader.load('obj/tree/tree.js', function(geometry) {
-                    apps.map(function(app) {
-                        var material = new THREE.MeshBasicMaterial({color: 0xff0000, opacity: 1.0}); 
-                        var mesh = new THREE.Mesh(geometry, geometry.materials[0]);
-                        app.scene.add(mesh);
-                    });
-    			});
-            }
+				var loader = new THREE.JSONLoader();
+				loader.load('obj/tree/tree.js', function(geometry) {
+					apps.map(function(app) {
+						var material = new THREE.MeshBasicMaterial({color: 0xff0000, opacity: 1.0}); 
+						var mesh = new THREE.Mesh(geometry, geometry.materials[0]);
+						app.scene.add(mesh);
+					});
+				});
+			}
 
 			function animate() {
 
@@ -139,7 +139,7 @@
 				var windowHalfY = window.innerHeight / 2;
 
 				init();
-                this.scene = scene;
+				this.scene = scene;
 
 				function init() {
 
